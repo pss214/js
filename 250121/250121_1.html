@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>250121_1</title>
+</head>
+<style>
+    .aamemuimg{
+        width: 120px;
+        height: 200px;
+    }
+</style>
+<body>
+    <table border="1">
+        <tr>
+            <td colspan="3"><h1>스타벅스 메뉴판</h1></td>
+        </tr>
+        <tr align="center">
+            
+            <td><img src="image/iceamericano.png" class="aamemuimg" id="aamemuimg"></td>
+            <td rowspan="4" align="left">
+                <input type="checkbox" id="aa_shot" value="shotadd" onclick="aa_updatePrice('shot')">샷추가<br>
+                <input type="checkbox" id="aa_syrup" value="shotadd" onclick="aa_updatePrice('syrup')">시럽<br>
+                <input type="checkbox" id="aa_milk" value="shotadd" onclick="aa_updatePrice('milk')">우유<br>
+                <input type="checkbox" id="aa_whipped" value="shotadd" onclick="aa_updatePrice('whipped')">휘핑크림<br>
+                <input type="checkbox" id="aa_drizzle" value="shotadd" onclick="aa_updatePrice('drizzle')">드리즐<br>
+            </td>
+        </tr>
+        <tr align="center">
+            <td><input type="text" value="아메리카노(ICE)" id="aaname"></td>
+        </tr>
+        <tr align="center">
+            <td>
+                <input type="radio" name="temp" checked="checked" value="ice" onclick="aaswImg('ice')">ICE
+                <input type="radio" name="temp" value="hot" onclick="aaswImg('hot')">HOT
+            </td>
+        </tr>
+        <tr align="center">
+            <td>가격<input type="text"  id="aapri" value = "5300"></td>
+        </tr>
+    </table>
+    <script>
+        function aa_updatePrice(type){
+            baseCash = Number(document.getElementById("aapri").value)
+            addPrice = 0
+            
+            if(type=='shot'){
+                if(document.getElementById("aa_shot").checked) addPrice+= 500
+                else addPrice-= 500
+            }
+            else if(type=='syrup'){
+                if(document.getElementById("aa_syrup").checked) addPrice+= 500
+                else addPrice-= 500
+            }
+            else if(type=='milk'){
+                if(document.getElementById("aa_milk").checked) addPrice+= 500
+                else addPrice-= 500
+            }else if(type=='whipped'){
+                if(document.getElementById("aa_whipped").checked) addPrice+= 500
+                else addPrice-= 500
+            }else if(type=='drizzle'){
+                if(document.getElementById("aa_drizzle").checked) addPrice+= 500
+                else addPrice-= 500
+            }
+            document.getElementById("aapri").value= baseCash+ addPrice
+        }
+        function aaswImg(aa_T){
+            var Type = aa_T
+            money = 5300
+            if(Type=="ice"){
+                document.getElementById('aamemuimg').src="image/iceamericano.png"
+                document.getElementById('aaname').value="아메리카노(ICE)"
+                document.getElementById('aapri').value= money
+            }else if(Type == "hot"){
+                document.getElementById('aamemuimg').src="image/hotamericano.png"
+                document.getElementById('aaname').value="아메리카노(HOT)"
+                document.getElementById('aapri').value= money - 500
+            }
+        }
+        
+    </script>
+</body>
+</html>

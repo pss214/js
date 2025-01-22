@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css.css" rel="stylesheet" type="text/css">
+    <title>hamburger_KIOSK</title>
+</head>
+<body>
+    <Table>
+        <th>
+            <h1>성수의 햄버거 가게</h1>
+        </th>
+        <tr>
+            <td>
+                <div class="tab">
+                    <input class ="radio" type="radio" name="group" id="one" checked>
+                    <input class ="radio" type="radio" name="group" id="two">
+                    <input class ="radio" type="radio" name="group" id="three">
+                    <input class ="radio" type="radio" name="group" id="four">
+                    <div class="tabs">
+                        <label class = "tab" id= "one-tab" for="one" >세트</label>
+                        <label class = "tab" id= "two-tab" for="two">햄버거</label>
+                        <label class = "tab" id= "three-tab" for="three">사이드</label>
+                    </div>
+                    
+                    <div class="panels">
+                        <div id="one-panel" class="panel">
+                            <table class="table-menu">
+                                <tr>
+                                    <td>
+                                        <img src="image/mojjarelaburger.png">
+                                    </td>
+                                    <td rowspan="5" class="option-bar">
+                                        음료
+                                        <select>
+                                            <option>콜라</option>
+                                            <option>제로콜라</option>
+                                            <option>사이다</option>
+                                            <option>제로사이다</option>
+                                            <option>환타</option>
+                                            <option>제로환타</option>
+                                        </select><br>
+                                        <input type="radio" name="MIB_d_size" onclick="MIB_update1(1)" value="l"><font>large</font>
+                                        <input type="radio" name="MIB_d_size" onclick="MIB_update1(2)" value="m" checked><font>medium</font><br><br>
+
+                                        사이드
+                                        <select id="MIB_s" onchange="MIB_update3()">
+                                            <option name="MIB_s" value="po" selected>감자튀김</option>
+                                            <option name="MIB_s" value="ss">치즈스틱(+300)</option>
+                                            <option name="MIB_s" value="dd">떡강정(+500)</option>
+                                            <option name="MIB_s" value="ck">치킨 한조각(+1000)</option>
+                                        </select><br>
+                                        <input type="radio" name="MIB_s_size" onclick="MIB_update2(1)" value="l"><font>large</font>
+                                        <input type="radio" name="MIB_s_size" onclick="MIB_update2(2)" value="m" checked><font>medium</font><br><br>
+
+                                    </td>
+                                    <td>
+                                        <img src="image/doubleQFC_set.png">
+                                    </td>
+                                    <td rowspan="5" class="option-bar">
+                                        음료
+                                        <select>
+                                            <option>콜라</option>
+                                            <option>제로콜라</option>
+                                            <option>사이다</option>
+                                            <option>제로사이다</option>
+                                            <option>환타</option>
+                                            <option>제로환타</option>
+                                        </select><br>
+                                        <input type="radio" name="DQF_d_size" onclick="DQF_update1(1)" value="l"><font>large</font>
+                                        <input type="radio" name="DQF_d_size" onclick="DQF_update1(2)" value="m" checked><font>medium</font><br><br>
+
+                                        사이드
+                                        <select id="DQF_s" onchange="DQF_update3()">
+                                            <option name="DQF_s" value="po" selected>감자튀김</option>
+                                            <option name="DQF_s" value="ss">치즈스틱(+300)</option>
+                                            <option name="DQF_s" value="dd">떡강정(+500)</option>
+                                            <option name="DQF_s" value="ck">치킨 한조각(+1000)</option>
+                                        </select><br>
+                                        <input type="radio" name="DQF_s_size" onclick="DQF_update2(1)" value="l"><font>large</font>
+                                        <input type="radio" name="DQF_s_size" onclick="DQF_update2(2)" value="m" checked><font>medium</font><br><br>
+                                    </td>
+                                    <td>
+                                    <img src="image/QCW_set.png">
+                                    </td>
+                                    <td rowspan="5" class="option-bar">
+                                        음료
+                                        <select>
+                                            <option>콜라</option>
+                                            <option>제로콜라</option>
+                                            <option>사이다</option>
+                                            <option>제로사이다</option>
+                                            <option>환타</option>
+                                            <option>제로환타</option>
+                                        </select><br>
+                                        <input type="radio" name="QCW_d_size" onclick="QCW_update1(1)" value="l"><font>large</font>
+                                        <input type="radio" name="QCW_d_size" onclick="QCW_update1(2)" value="m" checked><font>medium</font><br><br>
+
+                                        사이드
+                                        <select id="QCW_s" onchange="QCW_update3()">
+                                            <option name="QCW_s" value="po" selected>감자튀김</option>
+                                            <option name="QCW_s" value="ss">치즈스틱(+300)</option>
+                                            <option name="QCW_s" value="dd">떡강정(+500)</option>
+                                            <option name="QCW_s" value="ck">치킨 한조각(+1000)</option>
+                                        </select><br>
+                                        <input type="radio" name="QCW_s_size" onclick="QCW_update2(1)" value="l"><font>large</font>
+                                        <input type="radio" name="QCW_s_size" onclick="QCW_update2(2)" value="m" checked><font>medium</font><br><br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input class="input-c" type="text" value="모짜렐라 인더버거 세트"></td>
+                                    <td><input class="input-c" type="text" value="더블쿼터파운드 치즈 세트"></td>
+                                    <td><input class="input-c" type="text" value="콰트로치즈와퍼 세트"></td>
+                                </tr>
+                                <tr>
+                                    <td class="s-bar">
+                                        <input type="radio"name="p">포장
+                                        <input type="radio"name="p">비포장
+                                    </td>
+                                    <td class="s-bar">
+                                        <input type="radio"name="p">포장
+                                        <input type="radio"name="p">비포장
+                                    </td>
+                                    <td class="s-bar">
+                                        <input type="radio"name="p">포장
+                                        <input type="radio"name="p">비포장
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="s-bar">
+                                        <input type="radio"name="s">일회용품 필요<br>
+                                        <input type="radio"name="s">일회용품 불필요
+                                    </td>
+                                    <td class="s-bar">
+                                        <input type="radio"name="s">일회용품 필요<br>
+                                        <input type="radio"name="s">일회용품 불필요
+                                    </td>
+                                    <td class="s-bar">
+                                        <input type="radio"name="s">일회용품 필요<br>
+                                        <input type="radio"name="s">일회용품 불필요
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="s-bar"><input class="input-c" type="text" value="7900" id="MIB_set"></td>
+                                    <td class="s-bar"><input class="input-c" type="text" value="9100" id="DQF_set"></td>
+                                    <td class="s-bar"><input class="input-c" type="text" value="9900" id="QCW_set"></td>
+                                </tr>
+                                <tr >
+                                    <td colspan="2"><input type="button"value="장바구니"></td>
+                                    <td colspan="2"><input type="button"value="장바구니"></td>
+                                    <td colspan="2"><input type="button"value="장바구니"></td>
+                                </tr>
+                            </table> 
+                        </div>
+                        <div id="two-panel" class="panel">
+                            <table class="table-menu">
+                                <tr>
+                                    <td><img src="image/MIB.png"></td>
+                                    <td><img src="image/DQF.png"></td>
+                                    <td><img src="image/QCW.png"></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="input-c" type="text" value="모짜렐라 인더버거"></td>
+                                    <td><input class="input-c" type="text" value="더블쿼터파운드 치즈"></td>
+                                    <td><input class="input-c" type="text" value="콰트로치즈와퍼"></td>
+                                </tr>
+                                <tr>
+                                    <td class="s-bar">
+                                        <input type="radio"name="p">포장
+                                        <input type="radio"name="p">비포장
+                                    </td>
+                                    <td class="s-bar">
+                                        <input type="radio"name="p">포장
+                                        <input type="radio"name="p">비포장
+                                    </td>
+                                    <td class="s-bar">
+                                        <input type="radio"name="p">포장
+                                        <input type="radio"name="p">비포장
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="s-bar">
+                                        <input type="radio"name="s">일회용품 필요<br>
+                                        <input type="radio"name="s">일회용품 불필요
+                                    </td>
+                                    <td class="s-bar">
+                                        <input type="radio"name="s">일회용품 필요<br>
+                                        <input type="radio"name="s">일회용품 불필요
+                                    </td>
+                                    <td class="s-bar">
+                                        <input type="radio"name="s">일회용품 필요<br>
+                                        <input type="radio"name="s">일회용품 불필요
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="s-bar"><input class="input-c" type="text" value="7600" id="MIB"></td>
+                                    <td class="s-bar"><input class="input-c" type="text" value="6800" id="DQF"></td>
+                                    <td class="s-bar"><input class="input-c" type="text" value="9300" id="QCW"></td>
+                                </tr>
+                                <tr >
+                                    <td colspan="1"><input type="button"value="장바구니"></td>
+                                    <td colspan="1"><input type="button"value="장바구니"></td>
+                                    <td colspan="1"><input type="button"value="장바구니"></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div id="three-panel" class="panel">
+                            <table class="table-menu">
+                                <tr>
+                                    <td><img src="image/c_stick.png" class="s_menu"></td>
+                                    <td><img src="image/ice_cream.png" class="s_menu"></td>
+                                    <td><img src="image/neggetking.png" class="s_menu"></td>
+                                </tr>
+                                <tr>
+                                    <td class="s-bar">
+                                        <input type="radio"name="p">포장
+                                        <input type="radio"name="p">비포장
+                                    </td>
+                                    <td class="s-bar">
+                                        <input type="radio"name="p">포장
+                                        <input type="radio"name="p">비포장
+                                    </td>
+                                    <td class="s-bar">
+                                        <input type="radio"name="p">포장
+                                        <input type="radio"name="p">비포장
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="s-bar">
+                                        <input type="radio"name="s">일회용품 필요<br>
+                                        <input type="radio"name="s">일회용품 불필요
+                                    </td>
+                                    <td class="s-bar">
+                                        <input type="radio"name="s">일회용품 필요<br>
+                                        <input type="radio"name="s">일회용품 불필요
+                                    </td>
+                                    <td class="s-bar">
+                                        <input type="radio"name="s">일회용품 필요<br>
+                                        <input type="radio"name="s">일회용품 불필요
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="s-bar"><input class="input-c" type="text" value="2200" id="c_stick"></td>
+                                    <td class="s-bar"><input class="input-c" type="text" value="1100" id="ice_cream"></td>
+                                    <td class="s-bar"><input class="input-c" type="text" value="2500" id="nuggets"></td>
+                                </tr>
+                                <tr >
+                                    <td colspan="1"><input type="button"value="장바구니"></td>
+                                    <td colspan="1"><input type="button"value="장바구니"></td>
+                                    <td colspan="1"><input type="button"value="장바구니"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </Table>
+    <script>
+        MIB_type_1 = 2
+        MIB_type_2 = 2
+        MIB_type_3 = 0
+        function MIB_update1(type){
+            baseCash = Number(document.getElementById("MIB_set").value)
+            addCash = 0
+            
+            document.getElementsByName("MIB_d_size").forEach((a)=>{
+                if(a.checked){
+                    if(a.value == 'l'&&MIB_type_1==2){
+                        addCash+=500
+                        MIB_type_1=type
+                    }
+                    else if(a.value=='m'&&MIB_type_1==1){
+                        addCash-=500
+                        MIB_type_1=type
+                    }
+                }
+            })
+            document.getElementById("MIB_set").value=baseCash+addCash
+        }
+        function MIB_update2(type){
+            baseCash = Number(document.getElementById("MIB_set").value)
+            addCash = 0
+            
+            document.getElementsByName("MIB_s_size").forEach((a)=>{
+                if(a.checked){
+                    if(a.value == 'l'&&MIB_type_2==2){
+                        addCash+=500
+                        MIB_type_2=type
+                    }
+                    else if(a.value=='m'&&MIB_type_2==1){
+                        addCash-=500
+                        MIB_type_2=type
+                    }
+                }
+            })
+            document.getElementById("MIB_set").value=baseCash+addCash
+        }
+        function MIB_update3(){
+            baseCash = Number(document.getElementById("MIB_set").value)-MIB_type_3
+            addCash = 0
+            var sel = document.getElementById("MIB_s").value
+            if(sel=="ss"){
+                addCash=300
+            }else if(sel == "dd"){
+                addCash=500
+            }else if(sel =="ck"){
+                addCash= 1000
+            }else{
+                addCash=0
+            }
+            MIB_type_3=addCash
+            document.getElementById("MIB_set").value=baseCash+addCash
+        }
+        DQF_type_1 = 2
+        DQF_type_2 = 2
+        DQF_type_3 = 0
+        function DQF_update1(type){
+            baseCash = Number(document.getElementById("DQF_set").value)
+            addCash = 0
+            
+            document.getElementsByName("DQF_d_size").forEach((a)=>{
+                if(a.checked){
+                    if(a.value == 'l'&&DQF_type_1==2){
+                        addCash+=500
+                        DQF_type_1=type
+                    }
+                    else if(a.value=='m'&&DQF_type_1==1){
+                        addCash-=500
+                        DQF_type_1=type
+                    }
+                }
+            })
+            document.getElementById("DQF_set").value=baseCash+addCash
+        }
+        function DQF_update2(type){
+            baseCash = Number(document.getElementById("DQF_set").value)
+            addCash = 0
+            
+            document.getElementsByName("DQF_s_size").forEach((a)=>{
+                if(a.checked){
+                    if(a.value == 'l'&&DQF_type_2==2){
+                        addCash+=500
+                        DQF_type_2=type
+                    }
+                    else if(a.value=='m'&&DQF_type_2==1){
+                        addCash-=500
+                        DQF_type_2=type
+                    }
+                }
+            })
+            console.log(addCash)
+            document.getElementById("DQF_set").value=baseCash+addCash
+        }
+        function DQF_update3(){
+            baseCash = Number(document.getElementById("DQF_set").value)-DQF_type_3
+            addCash = 0
+            var sel = document.getElementById("DQF_s").value
+            if(sel=="ss"){
+                addCash=300
+            }else if(sel == "dd"){
+                addCash=500
+            }else if(sel =="ck"){
+                addCash= 1000
+            }else{
+                addCash=0
+            }
+            DQF_type_3=addCash
+            document.getElementById("DQF_set").value=baseCash+addCash
+        }
+        QCW_type_1 = 2
+        QCW_type_2 = 2
+        QCW_type_3 = 0
+        function QCW_update1(type){
+            baseCash = Number(document.getElementById("QCW_set").value)
+            addCash = 0
+            
+            document.getElementsByName("QCW_d_size").forEach((a)=>{
+                if(a.checked){
+                    if(a.value == 'l'&&QCW_type_1==2){
+                        addCash+=500
+                        QCW_type_1=type
+                    }
+                    else if(a.value=='m'&&QCW_type_1==1){
+                        addCash-=500
+                        QCW_type_1=type
+                    }
+                }
+            })
+            document.getElementById("QCW_set").value=baseCash+addCash
+        }
+        function QCW_update2(type){
+
+            baseCash = Number(document.getElementById("QCW_set").value)
+            addCash = 0
+            
+            document.getElementsByName("QCW_s_size").forEach((a)=>{
+                if(a.checked){
+                    if(a.value == 'l'&&QCW_type_2==2){
+                        addCash+=500
+                        QCW_type_2=type
+                    }
+                    else if(a.value=='m'&&QCW_type_2==1){
+                        addCash-=500
+                        QCW_type_2=type
+                    }
+                }
+            })
+            console.log(addCash)
+            document.getElementById("QCW_set").value=baseCash+addCash
+        }
+        function QCW_update3(){
+            baseCash = Number(document.getElementById("QCW_set").value)-QCW_type_3
+            addCash = 0
+            var sel = document.getElementById("QCW_s").value
+            if(sel=="ss"){
+                addCash=300
+            }else if(sel == "dd"){
+                addCash=500
+            }else if(sel =="ck"){
+                addCash= 1000
+            }else{
+                addCash=0
+            }
+            QCW_type_3=addCash
+            document.getElementById("QCW_set").value=baseCash+addCash
+        }
+</script>
+</body>
+</html>
